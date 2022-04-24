@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <%- include('./partials/head') %>
+  </head>
+  <body>
+    <%- include('./partials/header') %>
+    <div class="margeHaut"></div>
+    <div id="pageToutesVideos">
+      <h1>Inscription</h1>
+      <form class="inputInscription" action="/users" method="POST">
+        <div class="input-group mb-3 w-25">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Prénom"
+            aria-label="prenom"
+            name="prenom"
+            required
+          />
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Nom"
+            aria-label="nom"
+            name="nom"
+            required
+          />
+        </div>
+        <div class="input-group mb-3 w-25">
+          <input
+            type="email"
+            class="form-control"
+            placeholder="Adresse mail"
+            aria-label="adresseMail"
+            name="adresseMail"
+            required
+          />
+        </div>
+
+        <div class="input-group mb-3 w-25">
+          <input
+            type="password"
+            class="form-control"
+            placeholder="Mot de passe"
+            aria-label="Username"
+            name="mdp"
+            required
+          />
+        </div>
+
+        <div class="input-group mb-3 w-25">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Pays"
+            aria-label="pays"
+            name="pays"
+          />
+        </div>
+
+        <div class="input-group w-25">
+          <textarea
+            class="form-control"
+            placeholder="Description"
+            aria-label="description"
+            name="description"
+          ></textarea>
+        </div>
+
+        <div class="actionsInscription">
+          <div class="btnInscription">
+            <button class="btn btn-info btn-sm" type="reset">Effacer</button>
+          </div>
+
+          <div class="btnInscription">
+            <button class="btn btn-info btn-sm" type="submit">
+              S'inscrire
+            </button>
+          </div>
+        </div>
+      </form>
+      <div class="container-fluid" id="lienPageConnexion">
+        <a href="/connexion">J'ai déjà un compte</a>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+  <footer><%- include('./partials/footer') %></footer>
+</html>

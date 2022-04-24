@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <%- include('./partials/head') %>
+  </head>
+  <body>
+    <%-include('./partials/headerConnected') %>
+    <div class="margeHaut"></div>
+    <div class="fondBleu">
+      <h1>Modifier mon profil</h1>
+      <form
+        id="inputProfile"
+        action="/users/<%= utilisateur._id %>"
+        method="post"
+      >
+        <div class="input-group mb-3 w-25">
+          <input
+            type="text"
+            class="form-control"
+            value="<%= utilisateur.prenom %>"
+            name="prenom"
+            aria-label="prenom"
+            required
+          />
+          <input
+            type="text"
+            class="form-control"
+            value="<%= utilisateur.nom %>"
+            aria-label="nom"
+            required
+          />
+        </div>
+        <div class="input-group mb-3 w-25">
+          <input
+            type="email"
+            class="form-control"
+            value="<%= utilisateur.adresseMail %>"
+            name="adresseMail"
+            aria-label="adresseMail"
+            required
+          />
+        </div>
+        <div class="input-group mb-3 w-25">
+          <input
+            type="password"
+            class="form-control"
+            value="<%= utilisateur.mdp %>"
+            name="mdp"
+            aria-label="mdp"
+            required
+          />
+        </div>
+
+        <div class="input-group mb-3 w-25">
+          <input
+            type="text"
+            class="form-control"
+            value="<%= utilisateur.pays %>"
+            aria-label="pays"
+            name="pays"
+          />
+        </div>
+
+        <div class="input-group w-25">
+          <textarea
+            class="form-control"
+            value="<%= utilisateur.description %>"
+            aria-label="description"
+            name="description"
+          ></textarea>
+        </div>
+
+        <div id="btnModifProfile">
+          <button id="btnModifProfil" class="btn btn-info btn-sm" type="submit">
+            Enregistrer les modifications
+          </button>
+
+          <a
+            id="btnModifProfil"
+            href="/profile"
+            class="btn btn-info btn-sm"
+            type="submit"
+          >
+            Annuler
+          </a>
+        </div>
+      </form>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+  <footer><%- include('./partials/footer') %></footer>
+</html>

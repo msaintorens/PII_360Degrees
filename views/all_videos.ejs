@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <%- include('./partials/head') %>
+  </head>
+  <body>
+    <% if ( connected == false ) { %> <%- include('./partials/header') %> <% }
+    %> <% if ( connected == true ) { %> <%-
+    include('./partials/headerConnected') %><% } %>
+    <div class="margeHaut"></div>
+    <div id="pageToutesVideos">
+      <h1>Nos vidéos</h1>
+
+      <form
+        class="navbar-search w-25"
+        id="searchBar"
+        method="post"
+        action="/search_videos"
+      >
+        <div class="input-group mb-3">
+          <input
+            id="search"
+            type="text"
+            class="form-control"
+            placeholder="Rechercher une vidéo"
+            aria-label="rechercheVideo"
+            aria-describedby="basic-addon2"
+            name="recherche"
+          />
+          <button type="button" class="btn btn-light" type="submit">
+            <img class="" id="iconeLoupe" src="/images/iconeLoupe.png" alt="" />
+          </button>
+        </div>
+      </form>
+
+      <div>
+        <ul class="videos">
+          <% for ( let video of lesVideos ) { %>
+          <li class="video">
+            <span
+              ><video width="160" height="120" controls>
+                <source src="<%= video.videoUrl %>" /></video
+            ></span>
+
+            <span class="nomVideo" data-component="Video360Player"
+              ><%= video.nomVideo %>
+            </span>
+            <span class="descriptionVideo"><%= video.description %></span>
+          </li>
+          <% } %>
+        </ul>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/partials/searchVideo.js"></script>
+  </body>
+  <footer><%- include('./partials/footer') %></footer>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <%- include('./partials/head') %>
+  </head>
+  <body>
+    <% if ( connected == false ) { %> <%- include('./partials/header') %> <% }
+    %> <% if ( connected == true ) { %> <%-
+    include('./partials/headerConnected') %><% } %>
+    <div class="margeHaut"></div>
+    <div id="pageToutesVideos">
+      <h1>Les vidéos à la une</h1>
+      <div>
+        <ul class="videosUne">
+          <% for ( let video of lesVideos ) { %>
+          <li class="videoUne">
+            <span
+              ><video width="160" height="120" controls>
+                <source src="<%= video.videoUrl %>" /></video
+            ></span>
+            <span class="nomVideo"><%= video.nomVideo %></span>
+            <span class="descriptionVideo"><%= video.description %></span>
+          </li>
+          <% } %>
+        </ul>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+  <footer><%- include('./partials/footer') %></footer>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <%- include('./partials/head') %>
+  </head>
+  <body>
+     <%- include('./partials/headerConnected') %>
+    <div class="d-flex flex-row">
+      <div class="margeHaut w-50"></div>
+      <div class="margeHautMauve w-50"></div>
+    </div>
+    <div class="d-flex flex-row">
+      <div class="fondBleuProfile w-50">
+        <h1>Mon profil</h1>
+        <form class="presentationProfile">
+          <h5 class="presentationUser">
+            <%= utilisateur.prenom %> <%= utilisateur.nom %>
+          </h5>
+          <h6 class="presentationUser">
+            <%= utilisateur.pays %>
+          </h6>
+          <h6 class="presentationUser">
+            <%= utilisateur.description %>
+          </h6>
+
+        <div id="btnEditerProfil" class="w-100">
+          <a href="/modifProfile" class="btn btn-outline-light btn-sm">
+            <img src="/images/iconeStylo.png" />
+          </a>
+        </div>
+      </div>
+      <div class="fondMauve w-50">
+        <h1>Mes vidéos</h1>
+        <div>
+          <ul class="videos">
+            <% for ( let video of Videos ) { %>
+            <li class="video">
+              <span
+                ><video width="160" height="120" controls>
+                  <source src="<%= video.videoUrl %>" /></video
+              ></span>
+              <span class="nomVideo"><%= video.nomVideo %></span>
+              <span class="descriptionVideo"><%= video.description %></span>
+            </li>
+            <% } %>
+          </ul>
+        </div>
+        <div id="modifMesVideo">
+          <a href="/addVideo" class="btn btn-outline-light btn-sm">
+            <img src="/images/iconePlus.png" />
+          </a>
+
+          
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+  <footer><%- include('./partials/footer') %></footer>
+</html>

@@ -1,0 +1,320 @@
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  color: lightgray;
+}
+
+h1 {
+  margin-bottom: 20px;
+  text-align: center;
+  color: white;
+}
+
+.btn-info {
+  background-color: #4e8f9d;
+  color: aliceblue;
+  border-radius: 10px;
+}
+
+/*Général*/
+.fondBleu {
+  background-color: #051d40;
+  height: 500px;
+}
+
+.margeHaut {
+  height: 20px;
+  background-color: #051d40;
+}
+
+/* Header */
+
+#logoSite {
+  height: 4em;
+  width: 4em;
+}
+
+#navbar-brand {
+  font-size: 20px;
+}
+
+#navbarNavDropdown {
+  justify-content: flex-end;
+  align-content: flex-end;
+}
+
+.nav-item {
+  font-size: 20px;
+  align-items: flex-end;
+  text-align: center;
+  width: 300px;
+}
+
+.textNav {
+  padding-top: 8px;
+}
+
+#logoAppareil {
+  height: 2em;
+  width: 2em;
+}
+
+.dropdown-item {
+  border-color: black;
+  border-width: 5px;
+}
+
+/*Footer*/
+footer {
+  margin-top: 20px;
+}
+
+/*Page d'accueil*/
+h5 {
+  border-color: brown;
+  border-width: 10px;
+  height: 40px;
+}
+
+.border-4 {
+  width: 300px;
+  margin-left: 290px;
+}
+
+.carousel-caption {
+  justify-content: center;
+  align-items: center;
+}
+
+/*Page toutes vidéos*/
+#pageToutesVideos {
+  background-color: #051d40;
+  height: 600px;
+}
+
+#searchBar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  margin-left: 470px;
+  padding-top: 20px;
+}
+
+#iconeBarreRecherche {
+  background-color: #051d40;
+  width: 45px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1px;
+}
+
+#iconeLoupe {
+  width: 24px;
+  height: 24px;
+}
+
+.videos {
+  color: white;
+  display: flex;
+  margin-top: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.video {
+  width: 250px;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+}
+.nomVideo {
+  margin-top: 10px;
+  color: white;
+  font-weight: bold;
+}
+
+.descriptionVideo {
+  margin-top: 5px;
+  color: lightgray;
+  width: 200px;
+}
+
+/*Page vidéos à la une*/
+.videosUne {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.videoUne {
+  width: 250px;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+}
+
+/*Page profil*/
+.fondMauve {
+  background-color: #6257e3;
+  height: 700px;
+}
+
+.fondBleuProfile {
+  background-color: #051d40;
+  height: 700px;
+}
+
+.margeHautMauve {
+  height: 20px;
+  background-color: #6257e3;
+}
+
+#pageProfil {
+  flex-direction: row;
+}
+
+.presentationProfile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 30px;
+}
+
+#btnEditerProfil {
+  display: flex;
+  justify-content: end;
+  margin-right: 20px;
+  margin-top: 30px;
+}
+
+#modifMesVideo {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  height: 50px;
+  margin-right: 10px;
+}
+
+#btnModifVideo {
+  margin-left: 10px;
+}
+
+.presentationUser {
+  color: white;
+  display: flex;
+}
+
+/*Page connexion*/
+.inputConnexion {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 50px;
+}
+
+.btnConnexion {
+  margin-top: 20px;
+  margin-left: 10px;
+  text-align: center;
+}
+
+.actionsConnexion {
+  display: flex;
+  flex-direction: row;
+  margin-left: 135px;
+}
+
+/*Page d'inscription*/
+.actionsInscription {
+  display: flex;
+  flex-direction: row;
+  margin-left: 135px;
+}
+.btnInscription {
+  margin-top: 20px;
+  margin-left: 10px;
+  text-align: center;
+}
+
+#lienPageConnexion {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.inputInscription {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 30px;
+}
+
+/*Page modification du profil*/
+#inputProfile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 50px;
+}
+
+#btnModifProfil {
+  margin-top: 20px;
+  margin-left: 10px;
+  text-align: center;
+}
+
+#btnModifProfile {
+  display: flex;
+  flex-direction: row;
+}
+
+/*page ajout vidéo */
+#pageAjoutVideo {
+  background-color: #051d40;
+  height: 500px;
+}
+
+#inputAjoutVideo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 30px;
+}
+
+.btnAjoutVideo {
+  margin-left: 10px;
+  text-align: center;
+}
+
+#actionsAjoutVideo {
+  display: flex;
+  flex-direction: row;
+  margin-left: 135px;
+}
+
+#lienPageProfil {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+#inputPaysVideo {
+  margin-top: 15px;
+}
